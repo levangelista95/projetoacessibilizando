@@ -1,0 +1,61 @@
+<ion-view title="Cadastro Auditiva">
+    
+
+    <ion-content>
+        
+         
+
+  <button class="button button-positive button-block" ng-click = "getPicture()" >Escolher logo</button>
+  <img ng-src = "{{picture}}">
+
+
+  <form name = "cadastroauditiva" ng-submit="salvar(cadaudio)">
+
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Nome do aplicativo</span>
+                  <input type="text" placeholder="Ex: Acessibilizando" ng-model="cadaudio.nomeapp" required>
+                </label>
+
+                <div class="list">
+                  <label class="item item-input item-stacked-label">
+                    <span class="input-label">Nome do desenvolvedor</span>
+                    <input type="text" placeholder="Ex: Nome do desenvolvedor" ng-model="cadaudio.nomedesenvolvedor" required>
+                  </label>
+              
+                  <div class="list">
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Versão do aplicativo</span>
+                      <input type="text" placeholder="Ex: Versão do aplicativo"ng-model="cadaudio.versaoapp" required>
+                    </label>
+                              
+               
+                  <label class="item item-input item-stacked-label">
+                <span class="input-label">Digite a descrição objetiva</span>
+                <input type="text" placeholder="Ex: Descrição objetiva"ng-model="cadaudio.descricaoapp" required>
+                
+                </label>
+                
+                            
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Link do app na App Store</span>
+                <input type="text" placeholder="Ex: https://itunes.apple.com/br/app/whatsapp-messenger/id310633997?mt=8&"ng-model="cadaudio.url" required>
+              
+              </label>
+             
+             
+                
+
+          
+            </div>
+
+            
+
+            <button class="button button-block button-positive" ng-disabled="(form.$invalid || imagem == null)">
+              Salvar
+            </button>
+
+          </form>
+        </ion-content>
+
+</ion-view>

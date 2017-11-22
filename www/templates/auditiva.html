@@ -1,0 +1,39 @@
+<ion-view title="Auditiva">
+    <ion-nav-buttons side ="right">
+        <a class="button" ui-sref="loginauditiva">
+          Novo
+          </i>  
+        </a>
+    </ion-nav-buttons>
+    
+   
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+              <i class = "icon ion-search placeholder-icon"></i>
+              <input type="text" ng-model="search">
+            </div>
+   
+            <ion-item ui-sref="aplicativo ({id:cadaudio.$id})" class="item item-thumbnail-left" ng-repeat="cadaudio in cadaudios | filter: search | orderBy: 'nomeapp' ">
+                
+                
+                    
+                        <img src="{{cadaudio.imagemURL}}">
+                        <h2>{{cadaudio.nomeapp}}</h2>
+                        <p>{{cadaudio.nomedesenvolvedor}}</p>
+                        <p>{{cadaudio.versaoapp}}</p>
+                        
+
+                      
+                      
+                
+            </ion-item>
+
+
+
+
+
+
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,44 @@
+<ion-view title="Editar Auditiva">
+    
+
+    <ion-content>
+        
+          
+              <form name = "form" ng-submit="salvar(perfil)"
+
+              <div class="list">
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Nome do aplicativo</span>
+                  <input type="text" placeholder="Ex: Acessibilizando" ng-model="perfil.nomeapp" required>
+                </label>
+
+                <div class="list">
+                  <label class="item item-input item-stacked-label">
+                    <span class="input-label">Nome do desenvolvedor</span>
+                    <input type="text" placeholder="Ex: Nome do desenvolvedor" ng-model="perfil.nomedesenvolvedor" required>
+                  </label>
+              
+                  <div class="list">
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">Versão do aplicativo</span>
+                      <input type="text" placeholder="Ex: Versão do aplicativo"ng-model="perfil.versaoapp" required>
+                    </label>
+                              
+               
+                  <label class="item item-input item-stacked-label">
+                <span class="input-label">Digite a descrição</span>
+                <input type="text" placeholder="Ex: Descricao do aplicativo"ng-model="perfil.descricaoapp" required>
+                
+                </label>
+            
+            <button class="button button-block button-stable" ng-disabled="form.$invalid">
+              Salvar
+            </button>
+
+           
+
+
+          </form>
+        </ion-content>
+
+</ion-view>

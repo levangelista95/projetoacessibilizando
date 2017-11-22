@@ -1,0 +1,28 @@
+<ion-view title="Cadastro">
+
+        
+       
+        <ion-content>
+          <form name = "form" ng-submit="salvar(usuario)">         
+          
+          <div class="list">
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Email</span>
+                          <input type="email" placeholder="Email" ng-model="usuario.email" required>
+                        </label>
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Digite a Senha</span>
+                          <input type="password" placeholder="Digite a Senha"ng-model="usuario.senha" required>
+                        </label>
+                        
+                      
+                      <button class="button button-block button-positive"  ng-disabled="form.$invalid">
+                        Salvar
+                      </button>
+                    
+                    </div>
+                  </form>
+                  
+                    </ion-content>
+    
+    </ion-view>

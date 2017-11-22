@@ -1,0 +1,39 @@
+<ion-view title="Motora">
+    <ion-nav-buttons side ="right">
+        <a class="button" ui-sref="loginmotor">
+          Novo
+          </i>  
+        </a>
+    </ion-nav-buttons>
+    
+   
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+              <i class = "icon ion-search placeholder-icon"></i>
+              <input type="text" ng-model="search">
+            </div>
+   
+            <ion-item ui-sref="aplicativomotor ({id: cadmotor.$id})" class="item item-thumbnail-left" ng-repeat="cadmotor in cadmotors | filter: search | orderBy: 'nomeapp' ">
+                
+                
+                    
+                        <img src="{{cadmotor.imagemURL}}">
+                        <h2>{{cadmotor.nomeapp}}</h2>
+                        <p>{{cadmotor.nomedesenvolvedor}}</p>
+                        <p>{{cadmotor.versaoapp}}</p>
+                        
+
+                      
+                      
+                
+            </ion-item>
+
+
+
+
+
+
+    </ion-content>
+
+</ion-view>

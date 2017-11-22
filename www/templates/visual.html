@@ -1,0 +1,39 @@
+<ion-view title="Visual">
+    <ion-nav-buttons side ="right">
+        <a class="button" ui-sref="loginvisual">
+          Novo
+          </i>  
+        </a>
+    </ion-nav-buttons>
+    
+   
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+              <i class = "icon ion-search placeholder-icon"></i>
+              <input type="text" ng-model="search">
+            </div>
+   
+            <ion-item ui-sref="aplicativovisual ({id: cadvisual.$id})" class="item item-thumbnail-left" ng-repeat="cadvisual in cadvisuals | filter: search | orderBy: 'nomeapp' ">
+                
+                
+                    
+                        <img src="{{cadvisual.imagemURL}}">
+                        <h2>{{cadvisual.nomeapp}}</h2>
+                        <p>{{cadvisual.nomedesenvolvedor}}</p>
+                        <p>{{cadvisual.versaoapp}}</p>
+                        
+
+                      
+                      
+                
+            </ion-item>
+
+
+
+
+
+
+    </ion-content>
+
+</ion-view>

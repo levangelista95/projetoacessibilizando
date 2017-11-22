@@ -1,0 +1,46 @@
+<ion-view title="Informações sobre o aplicativo">
+        
+        <ion-content>
+           
+            
+                <div class="list">
+
+                    <a class="item item-thumbnail-left" >
+                            <img src="{{cadaudio.imagemURL}}">
+                            <h2>{{cadaudio.nomeapp}}</h2>
+                            <p>{{cadaudio.nomedesenvolvedor}}</p>
+                            <p>{{cadaudio.versaoapp}}</p>
+                                               
+                     </a>
+                       
+                                        <h5><b><center>Informações sobre app</center></b></h5>         
+                                        <p>{{cadaudio.descricaoapp}}</p>                             
+                                   
+                        </div>
+
+                        <a><center>
+                            <img src="{{baixar.imagem}}" ng-click="acessar()">
+                        </center></a>
+
+            <br>
+            <form name = "form" ng-submit="salvar(avaliar)">
+            <div class="button-bar">
+                    <a class="button"><i class="icon icon ion-star"></i></a>
+                    <a class="button"><i class="icon icon ion-star"></i></a>
+                    <a class="button"><i class="icon icon ion-star"></i></a>
+                    <a class="button"><i class="icon icon ion-star"></i></a>
+                    <a class="button"><i class="icon icon ion-star"></i></a>
+                  </div>
+                
+                  <label class="item item-input item-floating-label">
+                        <span class="input-label">Escreva a avaliação</span>
+                        <input type="text" placeholder="Descreva a avaliação" ng-model="avaliar.avaliacao" required>
+                 </label>
+
+                 <button class="button button-block button-positive" ng-disabled="form.$invalid">Salvar</button>
+                        
+
+            </form>
+        </ion-content>
+    
+    </ion-view>

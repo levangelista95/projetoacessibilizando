@@ -1,5 +1,12 @@
 {
   "name": "ContatosApp",
-  "app_id": "",
-  "type": "ionic1"
+  "app_id": "f3d39dca",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ],
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  }
 }

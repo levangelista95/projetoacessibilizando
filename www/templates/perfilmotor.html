@@ -1,0 +1,37 @@
+<ion-view title="Perfil">
+        <ion-nav-buttons side ="right" >
+                <button class="button button-icon icon ion-navicon" ui-sref="escolhamotor"></button>
+        </ion-nav-buttons>
+        
+       
+        <ion-content>
+           
+           
+           
+            <div class="list">
+                <div class="item item-input">
+                  <i class = "icon ion-search placeholder-icon"></i>
+                  <input type="text" ng-model="search">
+                </div>
+           
+
+            <ion-list>
+                     
+                            <ion-item ui-sref="editarmotor ({id: perfil.$id})" class="item item-avatar" ng-repeat="perfil in perfils | filter: search | orderBy: 'nomeapp' ">
+                                    <img src="{{perfil.imagemURL}}">
+                                    <h2>{{perfil.nomeapp}}</h2>
+                                  </a>
+
+                                  <ion-option-button class="button-assertive" ng-click="apagar(perfil.$id)">
+                                    Apagar
+                                </ion-option-button> 
+
+                            </ion-item>      
+
+                      </ion-list>    
+                           
+
+
+        </ion-content>
+    
+    </ion-view>
